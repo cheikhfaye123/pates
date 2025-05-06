@@ -6,50 +6,43 @@ const MenuPage: React.FC = () => {
       id: 1,
       name: 'Tomato & Basil',
       description: 'Classic pasta with fresh tomatoes and aromatic basil',
-      price: '$7.95',
       image: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 2,
       name: 'Truffle Mushrooms',
       description: 'Luxurious pasta with wild mushrooms and truffle oil',
-      price: '$9.50',
       image: 'https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 3,
       name: 'Mac & Cheese',
       description: 'Creamy blend of premium cheeses with elbow macaroni',
-      price: '$8.50',
       image: 'https://images.pexels.com/photos/1527603/pexels-photo-1527603.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 4,
       name: 'Carbonara',
       description: 'Traditional carbonara with pancetta and pecorino',
-      price: '$8.95',
       image: 'https://images.pexels.com/photos/5175515/pexels-photo-5175515.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 5,
       name: 'Parmesan Chicken',
       description: 'Breaded chicken cutlet with parmesan and marinara',
-      price: '$9.95',
-      image: 'https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=1600'
+      image: 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 6,
       name: 'Creamy Aglio-Olio',
       description: 'Garlic, olive oil, and cream sauce with parsley',
-      price: '$8.95',
-      image: 'https://images.pexels.com/photos/1487511/pexels-photo-1487511.jpeg?auto=compress&cs=tinysrgb&w=1600'
+      image: 'https://images.pexels.com/photos/1435896/pexels-photo-1435896.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 7,
       name: 'Pastitsio',
       description: 'Greek-style baked pasta with ground meat and béchamel',
-      price: '$10.95',
-      image: 'https://images.pexels.com/photos/5419336/pexels-photo-5419336.jpeg?auto=compress&cs=tinysrgb&w=1600'
+      image: 'https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&w=1600'
     }
   ];
 
@@ -74,16 +67,7 @@ const MenuPage: React.FC = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-script text-gray-800 mb-2">{item.name}</h3>
-                <p className="text-gray-600 mb-4">{item.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-red-500">{item.price}</span>
-                  <button 
-                    className="bg-red-500 text-white py-2 px-4 rounded-full text-sm font-medium hover:bg-red-600 transition-colors"
-                    onClick={() => alert('Item added to cart!')}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
+                <p className="text-gray-600">{item.description}</p>
               </div>
             </div>
           ))}

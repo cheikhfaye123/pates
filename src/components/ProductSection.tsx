@@ -6,7 +6,6 @@ type Product = {
   name: string;
   description: string;
   image: string;
-  price: string;
   isNew?: boolean;
 };
 
@@ -19,29 +18,25 @@ const ProductSection: React.FC = () => {
       name: 'Tomato & Basil',
       description: 'Classic pasta with fresh tomatoes and aromatic basil',
       image: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      price: '$7.95',
       isNew: true
     },
     {
       id: 2,
       name: 'Truffle Mushrooms',
       description: 'Luxurious pasta with wild mushrooms and truffle oil',
-      image: 'https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      price: '$9.50'
+      image: 'https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 3,
       name: 'Mac & Cheese',
       description: 'Creamy blend of premium cheeses with elbow macaroni',
-      image: 'https://images.pexels.com/photos/1527603/pexels-photo-1527603.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      price: '$8.50'
+      image: 'https://images.pexels.com/photos/1527603/pexels-photo-1527603.jpeg?auto=compress&cs=tinysrgb&w=1600'
     },
     {
       id: 4,
       name: 'Carbonara',
       description: 'Traditional carbonara with pancetta and pecorino',
-      image: 'https://images.pexels.com/photos/5175515/pexels-photo-5175515.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      price: '$8.95'
+      image: 'https://images.pexels.com/photos/5175515/pexels-photo-5175515.jpeg?auto=compress&cs=tinysrgb&w=1600'
     }
   ];
 
@@ -76,16 +71,7 @@ const ProductSection: React.FC = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-script text-gray-800 mb-2">{product.name}</h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-red-500">{product.price}</span>
-                  <button 
-                    className="bg-red-500 text-white py-2 px-4 rounded-full text-sm font-medium hover:bg-red-600 transition-colors"
-                    onClick={() => alert('Item added to cart!')}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
+                <p className="text-gray-600">{product.description}</p>
               </div>
             </div>
           ))}
